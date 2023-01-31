@@ -1,0 +1,83 @@
+@media(max-width: 1000px){
+  main{
+    flex-direction: column;
+  }
+  main .card-section {
+    height: auto;
+    width: 100vw;
+    background-image: url(../images/bg-main-mobile.png);
+    background-size: cover;
+    flex-direction: column-reverse;
+    margin-bottom: 100px;
+  }
+  main .card-section .front-card {
+    width: 285px;
+    height: 160px;
+    background-size: contain;
+    padding: 20px;
+    position: absolute;
+    top: 119px;
+    margin-right: 70px;
+  }
+  main .card-section .front-card .card-logo {
+    width: 60px;
+    height: 33px;
+  }
+  main .card-section .front-card .card-number {
+    font-size: 0.9em;
+    margin-top: 30px;
+  }
+  main .card-section .front-card .cardholder-name {
+    font-size: .6em;
+  }
+  main .card-section .front-card .card-date {
+    margin-bottom: 3px;
+    font-size: .7em;
+
+  }
+  main .card-section .front-card .card-date span{
+    font-size: .7em;
+  }
+  main .card-section .front-card .flex {
+    align-items: center;
+  }
+  main .card-section .back-card {
+    width: 285px;
+    height: 160px;
+    background-size: contain;
+    margin-left: 50px;
+    padding: 20px;
+  }
+  main .card-section .back-card p {
+    margin-right: 8px;
+    font-size: .7em;
+  }
+  .card-inputs {
+    margin: 40px 20px;
+
+    align-items: center;
+  }
+  input {
+    width: 330px!important;
+  }
+  .card-inputs .flex {
+    justify-content: flex-start;
+  }
+  .datecard-input-section .flex input {
+    width: 70px!important;
+  }
+  .datecard-input-section .flex .month-input {
+    margin-right: 8px;
+  }
+  .cvc-input {
+    width: 170px!important;
+    margin-left: 10px;
+  }
+  .thank-section {
+    height: auto;
+    width: 100vw;
+    transition: .3s;
+    top: 360px;
+    padding-bottom: 100px;
+  }
+}

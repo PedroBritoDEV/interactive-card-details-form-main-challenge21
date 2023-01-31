@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <main>
+    <div class="card-section">
+      <div class="front-card">
+        <img src="./images/card-logo.svg" alt="card-logo" class="card-logo">
+        <p class="card-number">0000 0000 0000 0000</p>
+        <div class="flex">
+          <p class="cardholder-name">JANE APPLESEED</p>
+          <div class="card-date"><span class="month-iformation">00</span>/<span class="year-information">00</span></div>
+        </div>
+      </div><!--front-card-->
+      <div class="back-card">
+        <p class="card-cvc">000</p>
+      </div>
+    </div><!--card-section-->
+
+    <form class="card-inputs">
+      <div class="cardholder-input-section">
+        <p>CARDHOLDER NAME</p>
+        <input type="text" name="cardholder" onkeyup="typing(0)" class="cardholder-input" maxlength="20" placeholder="e.g. Jane Applessed">
+        <p class="error-msg">can't be blenk</p>
+      </div><!--cardholder-input-section-->
+
+      <div class="cardnumber-input-section">
+        <p>CARD NUMBER</p>
+        <input type="number" name="cardnumber" onkeyup="typing(1)" class="cardnumber-input" maxlength="16" placeholder="e.g. 1234 5678 9123 0000">
+        <p class="error-msg">can't be blenk or incomplete</p>
+      </div><!--cardnumber-input-section-->
+
+      <div class="flex">
+        <div class="datecard-input-section">
+          <p>EXP. DATE (MM/YY)</p>
+            <div class="flex">
+              <input type="number" name="month" onkeyup="typing(2)" class="month-input" placeholder="MM"  maxlength="2">
+              <input type="number" name="year" onkeyup="typing(3)" class="year-input" placeholder="YY">
+            </div>
+            <p class="error-msg">invalid date</p>
+        </div><!--datecard-input-section-->
+
+        <div class="cvc-input-section">
+          <p>CVC</p>
+          <input type="number" name="cvc" class="cvc-input" onkeyup="typing(4)" placeholder="e.g. 123">
+          <p class="error-msg">can't be blenk</p>
+        </div>
+
+      </div><!--flex-->
+      <input type="submit" value="Confirm" class="submit-button" onclick="clickSubmit()">
+    </form><!--card-inputs-->
+    <div class="thank-section hidden">
+      <img src="./images/icon-complete.svg" alt="icon-complete">
+      <h3>THANK YOU!</h3>
+      <p>we've added your card details</p>
+      <button>Continue</button>
+    </div>
+  </main>
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>
